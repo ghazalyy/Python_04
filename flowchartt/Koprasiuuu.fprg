@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Ahmad Alfin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-21 11:36:19 AM"/>
+        <attribute name="created" value="QWhtYWQgQWxmaW47QUhNQURBTEZJTjsyMDIzLTA5LTA4OzAyOjA0OjQ5IFBNOzI5OTM="/>
+        <attribute name="edited" value="QWhtYWQgQWxmaW47QUhNQURBTEZJTjsyMDIzLTA5LTA4OzAzOjMwOjM2IFBNOzI7MzA5OA=="/>
+        <attribute name="edited" value="TEVOT1ZPO0FMOzIwMjMtMDktMTk7MDg6MTQ6MDcgUE07MTsyMDA2"/>
+        <attribute name="edited" value="ZmF0dXI7REVTS1RPUC01MDQ2T05BOzIwMjMtMDktMjE7MTE6MzY6MTkgQU07NjsyOTQw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="login, register, user" type="String" array="False" size=""/>
+            <declare name="choose" type="Integer" array="False" size=""/>
+            <output expression="&quot;Login/register?&quot;" newline="True"/>
+            <input variable="user"/>
+            <if expression="user==&quot;login&quot;">
+                <then>
+                    <call expression="login()"/>
+                </then>
+                <else>
+                    <call expression="register()"/>
+                </else>
+            </if>
+            <output expression="&quot;Menggunakan untuk apa?&quot;" newline="True"/>
+            <output expression="&quot;1.Tabungan 2.Barang 3.Jasa&quot;" newline="True"/>
+            <input variable="choose"/>
+            <if expression="choose==1">
+                <then>
+                    <call expression="Tabungan()"/>
+                </then>
+                <else>
+                    <if expression="choose==2">
+                        <then>
+                            <call expression="Barang()"/>
+                        </then>
+                        <else>
+                            <if expression="choose==3">
+                                <then>
+                                    <call expression="Jasa()"/>
+                                </then>
+                                <else>
+                                    <call expression="main()"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Terimakasih telah menggunakan program ini&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="Barang" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="menu, pilihan" type="Integer" array="False" size=""/>
+            <output expression="&quot;Selamat datang, Selamat berbelanja&quot;" newline="True"/>
+            <output expression="&quot;Ingin Beli apa?&quot;" newline="True"/>
+            <output expression="&quot;1.ATK 2.Obat 3.Makanan dan minuman&quot;" newline="True"/>
+            <input variable="menu"/>
+            <output expression="&quot;1.Self pick up 2.Diantar?&quot;" newline="True"/>
+            <input variable="pilihan"/>
+            <if expression="pilihan==1">
+                <then>
+                    <output expression="&quot;Silahkan ambil barang ditempat&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="pilihan==2">
+                        <then>
+                            <output expression="&quot;Silahkan menunggu pesanan di kelas anda&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <call expression="Barang()"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="Jasa" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="menu, pil" type="Integer" array="False" size=""/>
+            <output expression="&quot;Selamat datang di jasa kami&quot;" newline="True"/>
+            <output expression="&quot;Ketik 1 untuk Print , Ketik 2 untuk Cetak photo&quot;" newline="True"/>
+            <input variable="menu"/>
+            <if expression="menu==1">
+                <then>
+                    <output expression="&quot;Upload file yang akan dikirim&quot;" newline="True"/>
+                    <output expression="&quot;2 ribu untuk 1 jam pertama&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="menu==2">
+                        <then>
+                            <output expression="&quot;Upload photo yang ingin di cetak&quot;" newline="True"/>
+                            <output expression="&quot;all in ukuran, 5 ribu/photo &quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Pilih yang bener ya&quot;" newline="True"/>
+                            <call expression="Jasa()"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;1. Self pick up, 2. Diantar&quot;" newline="True"/>
+            <if expression="pil==1">
+                <then>
+                    <output expression="&quot;Silahkan ambil barang ditempat&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="pil==2">
+                        <then>
+                            <output expression="&quot;barang akan segera diantarkan, mohon menunnggu dikelas&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Pilih yang benar&quot;" newline="True"/>
+                            <call expression="Jasa()"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="login" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="email, password" type="String" array="False" size=""/>
+            <output expression="&quot;Masukkan Email&quot;" newline="True"/>
+            <input variable="email"/>
+            <output expression="&quot;Masukkan Password&quot;" newline="True"/>
+            <input variable="password"/>
+            <output expression="&quot;Selamat datang &quot;" newline="False"/>
+            <output expression="email" newline="True"/>
+        </body>
+    </function>
+    <function name="pinjaman" type="None" variable="">
+        <parameters/>
+        <body/>
+    </function>
+    <function name="register" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="namadepan, namabelakang, email, password, nim" type="String" array="False" size=""/>
+            <declare name="back" type="Boolean" array="False" size=""/>
+            <output expression="&quot;Masukkan Nama depan&quot;" newline="True"/>
+            <input variable="namadepan"/>
+            <output expression="&quot;Masukkan nama belakang&quot;" newline="True"/>
+            <input variable="namabelakang"/>
+            <output expression="&quot;Masukkan email untuk login&quot;" newline="True"/>
+            <input variable="email"/>
+            <output expression="&quot;Masukkan Password untuk login&quot;" newline="True"/>
+            <input variable="password"/>
+            <output expression="&quot;Kembali ke login&quot;" newline="True"/>
+            <assign variable="back" expression="false"/>
+        </body>
+    </function>
+    <function name="Tabungan" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="menu" type="String" array="False" size=""/>
+            <output expression="&quot;Selamat datang&quot;" newline="True"/>
+            <output expression="&quot;Ketik ya jika anda ingin menabung&quot;" newline="True"/>
+            <input variable="menu"/>
+            <if expression="menu==&quot;ya&quot;">
+                <then>
+                    <output expression="&quot;Selamat anda telah berhasil membuat tabungan&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;pilih yang benar&quot;" newline="True"/>
+                    <call expression="Tabungan()"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

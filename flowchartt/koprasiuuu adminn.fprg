@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="LENOVO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-21 11:22:11 AM"/>
+        <attribute name="created" value="TEVOT1ZPO0FMOzIwMjMtMDktMTk7MDg6MTg6MzggUE07MTkwNg=="/>
+        <attribute name="edited" value="TEVOT1ZPO0FMOzIwMjMtMDktMjA7MTI6NTY6MzggQU07MzsxOTkw"/>
+        <attribute name="edited" value="ZmF0dXI7REVTS1RPUC01MDQ2T05BOzIwMjMtMDktMjE7MTE6MjI6MTEgQU07MTsyOTIy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="user" type="String" array="False" size=""/>
+            <declare name="choose" type="Integer" array="False" size=""/>
+            <output expression="&quot;Login?&quot;" newline="True"/>
+            <input variable="user"/>
+            <if expression="user==&quot;login&quot;">
+                <then>
+                    <call expression="login()"/>
+                </then>
+                <else>
+                    <call expression="main()"/>
+                </else>
+            </if>
+            <output expression="&quot;Apa yang ingin anda lakukan hari ini?&quot;" newline="True"/>
+            <output expression="&quot;1. Menambah, menghapus, update menu 2. Menambah, menghapus, update user, 3. Melihat laporan keuangan &quot;" newline="True"/>
+            <input variable="choose"/>
+            <if expression="choose==1">
+                <then>
+                    <call expression="fitur()"/>
+                </then>
+                <else>
+                    <if expression="choose==2">
+                        <then>
+                            <call expression="user()"/>
+                        </then>
+                        <else>
+                            <if expression="choose==3">
+                                <then>
+                                    <call expression="laporan()"/>
+                                </then>
+                                <else>
+                                    <call expression="main()"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Semoga hari anda menyenangkan&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="fitur" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="tambah, hapus, update" type="String" array="False" size=""/>
+            <declare name="choose" type="Integer" array="False" size=""/>
+            <output expression="&quot;1. Tambah fitur 2. Hapus fitur 3. Update fitur&quot;" newline="True"/>
+            <input variable="choose"/>
+            <if expression="choose==1">
+                <then>
+                    <output expression="&quot;Anda ingin menambahkan fitur apa?&quot;" newline="True"/>
+                    <input variable="tambah"/>
+                    <output expression="&quot;Fitur berhasil ditambahkan&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="choose==2">
+                        <then>
+                            <output expression="&quot;Fitur mana yang ingin anda hapus?&quot;" newline="True"/>
+                            <input variable="hapus"/>
+                            <output expression="&quot;Fitur berhasil dihapus&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="choose=3">
+                                <then>
+                                    <output expression="&quot;Fitur mana yang ingin anda perbaharui?&quot;" newline="True"/>
+                                    <input variable="update"/>
+                                    <output expression="&quot;Fitur berhasil diperbaharui&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <call expression="menu()"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="laporan" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Laporan keuangan bulan ini adalah...&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="login" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="username, password" type="String" array="False" size=""/>
+            <output expression="&quot;Masukan username&quot;" newline="True"/>
+            <input variable="username"/>
+            <output expression="&quot;Masukan Password&quot;" newline="True"/>
+            <input variable="password"/>
+            <output expression="&quot;Selamat datang&quot;" newline="True"/>
+            <output expression="username" newline="True"/>
+        </body>
+    </function>
+    <function name="user" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="add, delete, update" type="String" array="False" size=""/>
+            <declare name="choose" type="Integer" array="False" size=""/>
+            <output expression="&quot;1. Tambah user 2. Hapus user 3. Update user&quot;" newline="True"/>
+            <input variable="choose"/>
+            <if expression="choose==1">
+                <then>
+                    <output expression="&quot;Anda ingin menambah user?&quot;" newline="True"/>
+                    <input variable="add"/>
+                    <output expression="&quot;User berhasil ditambah&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="choose==2">
+                        <then>
+                            <output expression="&quot;Anda ingin menghapus user?&quot;" newline="True"/>
+                            <input variable="delete"/>
+                            <output expression="&quot;user berhasil dihapus&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="choose==3">
+                                <then>
+                                    <output expression="&quot;Anda ingin memperbaharui user?&quot;" newline="True"/>
+                                    <input variable="update"/>
+                                    <output expression="&quot;User berhasil diperbaharui&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <call expression="user()"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
