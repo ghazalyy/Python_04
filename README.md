@@ -1,4 +1,4 @@
-# Python_04</br>
+# Python_04
 Aplikasi ini merupakan platform digital yang dirancang khusus untuk membantu anggota koperasi kampus dalam mengelola kegiatan keuangan dan memenuhi kebutuhan sehari-hari mereka, termasuk pinjaman, tabungan, pembelian ATK, serta layanan jasa printing dan fotokopi.</br>
 Fungsi aplikasi</br>
 -Meningkatkan Aksesibilitas</br>
